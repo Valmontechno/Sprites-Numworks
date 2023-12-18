@@ -21,7 +21,6 @@ Draw a sprite on the screen.
 **fillScreen(`color`):**<br>
 Fill the screen with a solid color.
 * `color` **(color)** **(default: `'#ffffff'`)** The color to fill the screen with.
-<br>
 
 #### Constants
 * **SCREEN_WIDTH** = `320`
