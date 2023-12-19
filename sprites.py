@@ -9,7 +9,6 @@ from kandinsky import *
 SCREEN_WIDTH = 320
 SCREEN_HEIGHT = 222
 
-FACTOR_CODE = '0123456789'
 COLOR_CODE = 'abcdefghijklmnopqrstuvwxyz'
 BLANK_CODE = '.'
 NEWLINE_CODE = ','
@@ -22,7 +21,7 @@ def drawSprite(sprite, pallet, x, y, scale=(1, 1)):
         xPos = x
         factorStr = '0'
         for letter in col:
-            if letter in FACTOR_CODE:
+            if letter in '0123456789':
                 factorStr += letter
             else:
                 factor = max(int(factorStr), 1)
