@@ -4,7 +4,7 @@ This module allowing to display images on Numworks calculator. You can draw spri
 ![Screenshot_20231219-192649](https://github.com/valmontechno/Sprites-Numworks/assets/108832011/e073f07e-b6fb-4a14-846e-5081d074c07e)
 
 ### Installation
-You can upload on calculator the sprite module from [this page](https://my.numworks.com/python/valmontechno/sprites).
+You can **[upload on calculator](https://my.numworks.com/python/valmontechno/sprites)** the sprite module from the Numworks website. And upload a [sprites demo](https://my.numworks.com/python/valmontechno/sprites_demo) or a [sprites animation demo](https://my.numworks.com/python/valmontechno/sprites_animation_demo).
 
 ### More
 I recommend using the [Kandinsky module of Numworks](https://github.com/ZetaMap/Kandinsky-Numworks) for test the program without putting it on the calculator.<br>
