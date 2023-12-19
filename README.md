@@ -1,6 +1,8 @@
 # Sprites-Numworks
 This module allowing to display images on Numworks calculator. You can draw sprites on a computer with the [sprites editor](sprites_editor.py) then display it on the calculator with the [sprites module](sprites.py).
 
+![Screenshot_20231219-192649](https://github.com/valmontechno/Sprites-Numworks/assets/108832011/e073f07e-b6fb-4a14-846e-5081d074c07e)
+
 ### Installation
 You can upload on calculator the sprite module from [this page](https://my.numworks.com/python/valmontechno/sprites).
 
@@ -25,3 +27,10 @@ Fill the screen with a solid color.
 #### Constants
 * **SCREEN_WIDTH** = `320`
 * **SCREEN_HEIGHT** = `222`
+
+### Sprites Editor
+
+![image](https://github.com/valmontechno/Sprites-Numworks/assets/108832011/766ecfc1-a97e-4079-8d78-028d52361985)
+
+This software allows you to draw sprites. Access the `File > Export` menu to obtain the string and the color palette to enter in the `drawSprite()` function.
+
