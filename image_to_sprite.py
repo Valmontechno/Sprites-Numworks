@@ -31,7 +31,7 @@ for row in range(img.height):
     factor = 0
     char = ''
     for col in range(img.width +1):
-        if char != '' and (col == img.width and char != BLANK_CHAR) or (col < img.width and char != BLANK_CHAR if img.getpixel((col, row))[3] <= TRANSPARENCY_LIMIT else COLOR_CHAR[palette.index(imgP.getpixel((col, row)))]):
+        if char != '' and (col == img.width and char != BLANK_CHAR) or (col < img.width and char != (BLANK_CHAR if img.getpixel((col, row))[3] <= TRANSPARENCY_LIMIT else COLOR_CHAR[palette.index(imgP.getpixel((col, row)))])):
             if factor > 1:
                 sprite += str(factor)
             sprite += char
