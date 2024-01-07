@@ -12,6 +12,7 @@ img = Image.open(filedialog.askopenfilename())
 
 if img.width > SCREEN_WIDTH or img.height > SCREEN_HEIGHT:
     img = img.resize((SCREEN_WIDTH, SCREEN_HEIGHT))
+    print(f'Image resize to {SCREEN_WIDTH}×{SCREEN_HEIGHT}')
 
 img = img.convert('RGBA')
 imgP = img.convert('P')

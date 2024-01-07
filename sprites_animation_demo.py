@@ -1,3 +1,5 @@
+# Upload here: https://my.numworks.com/python/valmontechno/sprites_animation_demo
+
 from sprites import *
 from ion import *
 from time import sleep
@@ -11,8 +13,7 @@ bgColor = '#7892ff'
 textColor = '#000000'
 pallets = [
     ('#d82800','#887000','#fc9838',bgColor),
-    ('#fcd8a8','#d82800','#fc9838',bgColor),
-    ('#ffffff','#009900','#ffb301',bgColor)
+    ('#fcd8a8','#d82800','#fc9838',bgColor)
 ]
 
 palletIndex = 0
