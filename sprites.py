@@ -2,7 +2,7 @@
 # https://github.com/valmontechno/Sprites-Numworks
 
 __name__ = 'sprites'
-__version__ = '1.1'
+__version__ = '1.2'
 
 from kandinsky import *
 
@@ -30,7 +30,7 @@ def drawSprite(sprite, pallet, x, y, scale=(1, 1)):
                     fill_rect(int(xPos), int(yPos), int(scale[0] * factor), int(scale[1]), color)
                 xPos += scale[0] * factor
                 factorStr = '0'
-        yPos += scale[1]
+        yPos += scale[1] * max(int(factorStr), 1)
 
 def fillScreen(color='#ffffff'):
     fill_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, color)
