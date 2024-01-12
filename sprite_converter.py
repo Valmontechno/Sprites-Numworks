@@ -28,11 +28,20 @@ palette = list(palette)
 print('(' + ','.join(["'#%02x%02x%02x'" % tuple(palette[i]) for i in range(len(palette))]) + ')')
 
 sprite = ''
+newlineFactor = 0
 for row in range(img.height):
     factor = 0
     char = ''
+    blankLine = True
     for col in range(img.width +1):
-        if char != '' and (col == img.width and char != BLANK_CHAR) or (col < img.width and char != (BLANK_CHAR if img.getpixel((col, row))[3] <= TRANSPARENCY_LIMIT else COLOR_CHAR[palette.index(imgP.getpixel((col, row)))])):
+        if char != '' and ((col == img.width and char != BLANK_CHAR) or (col < img.width and char != (BLANK_CHAR if img.getpixel((col, row))[3] <= TRANSPARENCY_LIMIT else COLOR_CHAR[palette.index(imgP.getpixel((col, row)))]))):
+            if blankLine and row > 0:
+                if newlineFactor > 1:
+                    sprite += str(newlineFactor)
+                sprite += NEWLINE_CHAR
+                newlineFactor = 0
+                blankLine = False
+            
             if factor > 1:
                 sprite += str(factor)
             sprite += char
@@ -40,8 +49,7 @@ for row in range(img.height):
         if col < img.width:
             char = BLANK_CHAR if img.getpixel((col, row))[3] <= TRANSPARENCY_LIMIT else COLOR_CHAR[palette.index(imgP.getpixel((col, row)))]
             factor += 1
-    if row < img.height -1:
-        sprite += ','
+    newlineFactor += 1
 
 print(f"'{sprite}'")
 input()
