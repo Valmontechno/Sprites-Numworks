@@ -2,8 +2,9 @@
 # https://github.com/valmontechno/Sprites-Numworks
 
 __name__ = 'sprites'
-__version__ = '1.2'
+__version__ = '2.0'
 
+from math import *
 from kandinsky import *
 
 SCREEN_WIDTH = 320
@@ -13,7 +14,10 @@ COLOR_CHAR = 'abcdefghijklmnopqrstuvwxyz'
 BLANK_CHAR = '.'
 NEWLINE_CHAR = ','
 
-def drawSprite(sprite, pallet, x, y, scale=(1, 1)):
+def smooth(n, s):
+    return floor(n) if s > 0 else ceil(n)
+
+def draw_sprite(sprite, pallet, x, y, scale=(1, 1)):
     if isinstance(scale, (int, float)):
         scale = [scale] * 2
     yPos = y
@@ -27,10 +31,10 @@ def drawSprite(sprite, pallet, x, y, scale=(1, 1)):
                 factor = max(int(factorStr), 1)
                 if char != BLANK_CHAR:
                     color = pallet[COLOR_CHAR.index(char)]
-                    fill_rect(int(xPos), int(yPos), int(scale[0] * factor), int(scale[1]), color)
-                xPos += scale[0] * factor
+                    fill_rect(smooth(xPos, scale[0]), smooth(yPos, scale[1]), smooth(scale[0] * factor, -scale[0]), smooth(scale[1], -scale[1]), color)
+                xPos += (scale[0] * factor)
                 factorStr = '0'
-        yPos += scale[1] * max(int(factorStr), 1)
+        yPos += (scale[1] * max(int(factorStr), 1))
 
-def fillScreen(color='#ffffff'):
+def fill_screen(color='#ffffff'):
     fill_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, color)
