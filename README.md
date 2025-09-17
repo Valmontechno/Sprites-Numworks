@@ -1,7 +1,9 @@
 # Sprites-Numworks
 This module allows you to display images on the Numworks calculator. You can convert any image with the [sprite converter](sprite_converter.py) and then display it on the calculator with the [sprites module](sprites.py).
 
-![Screenshot_20231219-192649](https://github.com/valmontechno/Sprites-Numworks/assets/108832011/e073f07e-b6fb-4a14-846e-5081d074c07e)
+![](https://github.com/valmontechno/Sprites-Numworks/assets/108832011/e073f07e-b6fb-4a14-846e-5081d074c07e)
+![](https://github.com/user-attachments/assets/d3077ab7-0398-4f00-9a73-b51b2714e00d)
+
 
 ### Installation
 You can [upload to the calculator](https://my.numworks.com/python/valmontechno/sprites) the sprites module from the Numworks website.
